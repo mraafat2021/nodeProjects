@@ -1,0 +1,46 @@
+extends layout 
+
+block content
+    button(type= "button" id="back") 
+        i(class="bi bi-arrow-return-left") 
+        i Back
+    .container
+        each country, i in data
+            .country-container
+                a(href= country.flag, target="_blank")
+                    img(src= country.flag, alt=`${country.name} flag`)
+                .details
+                    h2= country.name
+                    h4 Native name: 
+                        span #{country.nativeName}
+                    h4 Population: 
+                        span #{country.population ? country.population.toLocaleString() : country.population}
+                    h4 Region: 
+                        span #{country.region}
+                    h4 Sub Region: 
+                        span #{country.subregion}
+                    h4 Capital: 
+                        span #{country.capital ? country.capital : "none"}    
+                    h4 Area: 
+                        span #{country.area ? country.area.toLocaleString() : country.area} km
+                            sup 2
+                    h4.languages Languages:
+                        - if (country.languages != null) { 
+                            each language, i in country.languages
+                                span #{language.name} 
+                        - } else {
+                            span none
+                        - }
+                    h4 Currencies: 
+                        span #{country.currencies ? country.currencies[0].name : "none"}
+                    h4 Time Zone: 
+                        span #{country.timezones ? country.timezones[0] : "none"}
+                    h4.languages Border:
+                        - if (country.borders != null) { 
+                            each border, i in country.borders
+                                span #{border}
+                        - } else {
+                            span none 
+                        - }
+                
+                

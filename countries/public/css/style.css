@@ -1,0 +1,357 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@300;600;800&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    font-weight: 600;
+    color: hsl(200, 15%, 8%);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    align-items: center;
+    color: hsl(200, 15%, 8%);
+}
+
+button#back {
+    align-self: flex-start;
+    margin-left: 70px;
+    margin-top: 30px;
+    padding: 8px 28px;
+    border-radius: 20px;
+    font-size: 1rem;
+    text-align: center;
+    cursor: pointer;
+    background-color: #2B3044;
+    color: #fff;
+    border: none;
+    outline: none;
+}
+
+button#back:hover {
+    background-color: #1a1e2c;
+}
+
+button#back i:first-child {
+    margin-right: 5px;
+}
+
+.dark {
+    color: white;
+    background-color: hsl(207, 26%, 17%);
+}
+
+.dark button,
+.dark input,
+.dark select,
+.dark i,
+.dark input::placeholder,
+.dark a {
+    color: white
+}
+
+.dark header {
+    box-shadow: 0 0 15px hsl(0, 0%, 11%);
+}
+
+.dark main .options .search {
+    border: 1px solid hsl(207, 26%, 17%);
+}
+
+.dark main .options .search i {
+    color: white
+}
+
+.dark main .options select {
+    border: 1px solid hsl(207, 26%, 17%);
+}
+
+.dark main .options select option {
+    background-color: hsl(207, 26%, 17%);
+}
+
+.dark button#back {
+    background-color: #fff;
+    color: #2B3044;
+}
+
+.dark button#back i {
+    color: #2B3044;
+}
+
+.dark button#back:hover {
+    background-color: lavender;
+}
+
+.loading {
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    display: flex;
+    align-items: center;
+}
+
+.loading img {
+    width: 50px;
+    height: 50px;
+    mix-blend-mode: multiply;
+}
+
+header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 70px;
+    box-shadow: 0 0 15px lightgray;
+}
+
+header button {
+    font-weight: 800;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+header button i {
+    margin-right: 10px;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 70px;
+}
+
+main .options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 40px;
+}
+
+main .options .search {
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgray;
+    padding: 0 0 0 30px;
+    box-shadow: 0 2px 3px 0 hsla(0, 0%, 0%, 0.3);
+    width: 300px;
+}
+
+main .options .search i {
+    color: gray;
+}
+
+main .options .search input {
+    border: 0;
+    padding: 10px 0 10px 30px;
+    outline: 0;
+    background-color: transparent;
+}
+
+main .options select {
+    padding: 10px 30px 10px 30px;
+    text-align: left;
+    border: 1px solid lightgray;
+    outline: 0;
+    box-shadow: 0 2px 3px 0 hsla(0, 0%, 0%, 0.3);
+    background-color: transparent;
+}
+
+main .countries {
+    display: grid;
+    grid-gap: 50px;
+    grid-template-columns: repeat(4, auto);
+    justify-content: space-between;
+}
+
+main .countries .country {
+    display: flex;
+    flex-direction: column;
+    /*box-shadow: 0 0 10px rgb(226, 226, 226);*/
+    box-shadow: 0 2px 6px 0 hsla(0, 0%, 0%, 0.3);
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+main .countries .country img {
+    width: 100%;
+    height: 150px;
+    border-radius: 5px 5px 0 0;
+}
+
+main .countries .country .details {
+    padding: 15px;
+    line-height: 1.9rem;
+}
+
+main .countries .country .details h5 {
+    margin-bottom: 10px;
+}
+
+main .countries .country .details h6 span {
+    font-weight: normal;
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    padding: 30px 70px;
+    flex-direction: column;
+}
+
+.container .country-container {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 50px;
+}
+
+.container a {
+    width: 50%;
+}
+
+.container img {
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 2px 4px 0 hsla(0, 0%, 0%, 0.3);
+}
+
+.container .details {
+    padding: 0 50px;
+    line-height: 2.2rem;
+}
+
+.container .details h4.languages span {
+    padding: 5px;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 2px 0 hsla(0, 0%, 0%, 0.3);
+}
+
+.container .details span {
+    font-weight: normal;
+}
+
+.error-container {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 70px;
+}
+
+.error-container h1 {
+    font-size: 4rem;
+}
+
+.error-container p {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+}
+
+.error-container a {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 8px 28px;
+    border-radius: 20px;
+    font-size: 2rem;
+    text-align: center;
+    cursor: pointer;
+    background-color: hsl(200, 15%, 8%);
+    color: #fff;
+    border: none;
+    outline: none;
+    font-weight: bold;
+}
+
+.error-container a:hover {
+    background-color: #1a1e2c;
+}
+
+@media screen and (max-width: 950px) {
+    main .countries {
+        grid-gap: 50px;
+        grid-template-columns: repeat(3, auto);
+    }
+}
+
+@media screen and (max-width: 800px) {
+    main .countries {
+        grid-gap: 50px;
+        grid-template-columns: repeat(2, auto);
+    }
+    .modal-content {
+        flex-direction: column;
+    }
+    .modal-content img {
+        width: 100%;
+        margin-right: 0;
+    }
+    .modal-content .country-details {
+        text-align: center;
+    }
+    .modal-content .country-details h2 {
+        margin-top: 20px;
+    }
+    .modal-content .country-details .more-details {
+        flex-direction: column;
+    }
+    .container {
+        padding: 30px;
+    }
+    .container .country-container {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .container a {
+        width: 100%;
+    }
+    .container img {
+        width: 100%;
+        height: 100%;
+        margin-bottom: 20px;
+    }
+    .container .details {
+        width: 100%;
+    }
+    .error-container {
+        padding: 30px;
+    }
+    .error-container h1 {
+        font-size: 2rem;
+        margin-bottom: 20px;
+    }
+    .error-container p {
+        font-size: 1rem;
+        text-transform: uppercase;
+    }
+    .error-container a {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    main .countries {
+        grid-gap: 50px;
+        grid-template-columns: repeat(1, auto);
+    }
+    main .options {
+        flex-direction: column;
+    }
+    main .options .search {
+        margin-bottom: 20px;
+    }
+}
